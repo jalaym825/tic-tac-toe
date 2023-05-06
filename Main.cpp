@@ -6,7 +6,6 @@ using namespace std;
 int main()
 {
     TTT t;
-    int in;
     int i;
     for (i = 0; i < 9; i++)
     {

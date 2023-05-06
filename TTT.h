@@ -52,11 +52,15 @@ bool TTT::NextTurn(int p)
         cin >> in;
         if (s.count(in) == 1)
         {
+            system("cls");
+            display();
             cout << "Your input already taken in this game!" << endl;
             continue;
         }
         if (in <= 0 || in > 9)
         {
+            system("cls");
+            display();
             cout << "Your input is out of range!" << endl;
             continue;
         }
@@ -64,6 +68,7 @@ bool TTT::NextTurn(int p)
         v[m1[in].first][m1[in].second] = players[p].ch;
         players[p].set(in);
         s.insert(in);
+        system("cls");
         display();
         if (players[p].v.size() >= 3 && players[p].isWinner())
         {
