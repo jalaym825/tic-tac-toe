@@ -17,6 +17,27 @@ public:
 
 int Player::x = 1;
 
+char ch1;
+void Player::get()
+{
+    cout << "Enter player " << x << " name: ";
+    cin >> name;
+    if (x == 1)
+    {
+        cout << "Take X or 0:";
+        cin >> ch;
+        ch1 = ch;
+    }
+    else
+        ch = (ch1 == 'X' ? '0' : 'X');
+    x++;
+}
+
+void Player::set(int y)
+{
+    v.push_back(y);
+}
+
 bool Player::isWinner()
 {
     sort(v.begin(), v.end());
@@ -45,23 +66,5 @@ bool Player::isWinner()
     return false;
 }
 
-char ch1;
-void Player::get()
-{
-    cout << "Enter player " << x << " name: ";
-    cin >> name;
-    if (x == 1)
-    {
-        cout << "Take X or 0:";
-        cin >> ch;
-        ch1 = ch;
-    }
-    else
-        ch = (ch1 == 'X' ? '0' : 'X');
-    x++;
-}
 
-void Player::set(int y)
-{
-    v.push_back(y);
-}
+
