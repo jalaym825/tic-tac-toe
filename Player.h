@@ -65,6 +65,3 @@ bool Player::isWinner()
     }
     return false;
 }
-
-
-

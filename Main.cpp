@@ -6,10 +6,11 @@ using namespace std;
 int main()
 {
     TTT t;
-    int i;
-    for (i = 0; i < 9; i++)
+    int i = 1;
+    while (t.s.size() <= 9)
     {
-        if (!t.NextTurn(i % 2))
+        i = !i;
+        if (!t.NextTurn(i))
             break;
     }
     if (i == 9)

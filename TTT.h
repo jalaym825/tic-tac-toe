@@ -1,11 +1,14 @@
 #include <bits/stdc++.h>
+#include <windows.h>
+#include <conio.h>
+#include <signal.h>
+
 using namespace std;
 
 class TTT
 {
 private:
     vector<vector<char>> v = {{' ', ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '}};
-    set<int> s;
     map<int, pair<int, int>> m1 = {
         {1, {0, 0}},
         {2, {0, 1}},
@@ -20,6 +23,7 @@ private:
     Player players[2];
 
 public:
+    set<int> s;
     TTT()
     {
         cout << "HERE THE GAME BEGINS:" << endl;
@@ -45,11 +49,34 @@ void TTT::display()
 
 bool TTT::NextTurn(int p)
 {
+    // int waitSecond = 10; // it'll wait for half of it's
     int in;
+    cout << players[p].name << "'s Turn: ";
     while (true)
     {
+        // while (1)
+        // {
+        //     if (kbhit())
+        //     {
+        //         cin >> in;
+        //         break;
+        //     }
+
+        //     Sleep(500); // sleep for 1/2 sec ;
+        //     --waitSecond;
+
+        //     if (waitSecond == 0) // wait complete.
+        //     {
+        //         system("cls");
+        //         display();
+        //         cout << players[p].name << "'s turn has been skipped!" << endl;
+        //         // cout << players[p].name << "'s Turn: ";
+        //         return true;
+        //     }
+        // }
         cout << players[p].name << "'s Turn: ";
         cin >> in;
+
         if (s.count(in) == 1)
         {
             system("cls");
