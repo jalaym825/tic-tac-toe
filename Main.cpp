@@ -14,5 +14,5 @@ int main()
             break;
     }
     if (i == 9)
-        cout << "Tie!!!" << endl;
+        cout << "Tie!!!!" << endl;
 }
