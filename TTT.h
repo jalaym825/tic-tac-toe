@@ -51,7 +51,7 @@ bool TTT::NextTurn(int p)
 {
     // int waitSecond = 10; // it'll wait for half of it's
     int in;
-    cout << players[p].name << "'s Turn: ";
+    // cout << players[p].name << "'s Turn: ";
     while (true)
     {
         // while (1)
